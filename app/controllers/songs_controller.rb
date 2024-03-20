@@ -1,7 +1,11 @@
 class SongsController < ApplicationController
 
   def index
-    Song.all
+    @songs = Song.all
+  end
+
+  def show
+
   end
 
 end
