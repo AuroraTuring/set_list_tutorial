@@ -12,12 +12,13 @@ describe "User Story Two" do
       it "Then I see the song's title, length, and play count" do
         # Arrange - set up
         purple = Song.create!(title: 'Purple Rain', length: 845, play_count: 8599)
+        artist = Artist.create!(name: 'Prince')
 
         # Act - perform the actions
         visit "/songs/#{purple.id}"
 
         # Assert - verify behavior
-
+        save_and_open_page
 
         end
       end
